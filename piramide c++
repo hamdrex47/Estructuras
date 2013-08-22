@@ -1,0 +1,37 @@
+#include <cstdlib>
+#include <iostream>
+
+using namespace std;
+
+    int main() {
+              
+        int x;
+        cout<<("ingrese el numero de filas de la piramide : ");
+        cin>>x;
+        int y=x;
+        int w=x;
+        int cont=0;
+        for(int i=0; i<x; i++){
+            y=w;
+            for(int j=0; j<x*2;j++){
+                if(j==y){
+                cout<<("*");
+                    if(cont<i){
+                        y+=2;
+                        cont++;
+                    }
+                }
+                else{
+                    cout<<(" ");
+                }
+            }
+            w--;
+            cont=0;
+           cout<<("\n");
+        }
+    
+
+
+    system("PAUSE");
+    return EXIT_SUCCESS;
+}
